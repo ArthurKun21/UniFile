@@ -1,0 +1,11 @@
+[versions]
+kotlin = "2.1.20"
+agp = "8.9.2"
+annotation = "1.9.1"
+
+[libraries]
+androidx-annotation = { module = "androidx.annotation:annotation", version.ref = "annotation" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
