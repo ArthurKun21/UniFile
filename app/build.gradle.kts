@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId = "com.hippo.unifile.example"
-        minSdk = 35
+        minSdk = 24
         versionCode = 8
         versionName = "1.0.0"
     }
