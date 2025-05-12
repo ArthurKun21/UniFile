@@ -1,24 +1,30 @@
-apply plugin: 'com.android.library'
-
+plugins {
+    alias(libs.plugins.android.library)
+}
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    namespace = "com.hippo.unifile"
+    compileSdk = 35
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 29
-        versionCode 8
-        versionName '1.0.0'
+        minSdk = 35
+        versionCode = 8
+        versionName = "1.0.0"
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
 }
 
 dependencies {
-    compileOnly 'androidx.annotation:annotation:1.2.0'
+    compileOnly(libs.androidx.annotation)
 }
