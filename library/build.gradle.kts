@@ -3,7 +3,7 @@ plugins {
 }
 android {
     namespace = "com.hippo.unifile"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 24

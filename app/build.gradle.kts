@@ -3,7 +3,7 @@ plugins {
 }
 android {
     namespace = "com.hippo.unifile.example"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.hippo.unifile.example"
