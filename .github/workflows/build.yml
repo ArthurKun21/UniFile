@@ -26,6 +26,10 @@ env:
 jobs:
   build-app:
     runs-on: macos-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        module: [app]
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -45,12 +49,12 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x ./gradlew
     
-      - name: Build app
+      - name: Build ${{ matrix.module }} app
         run: |
-          ./gradlew :app:assembleRelease --parallel
+          ./gradlew :${{ matrix.module }}:assembleRelease --parallel
       
-      - name: Upload APK
+      - name: Upload APK ${{ matrix.module }}
         uses: actions/upload-artifact@v4
         with:
-          name: apk-${{ github.run_number }}
-          path: app/build/outputs/apk/release/app-release.apk
+          name: ${{ matrix.module }}-apk-${{ github.run_number }}
+          path: ${{ matrix.module }}/build/outputs/apk/release/${{ matrix.module }}-release.apk
