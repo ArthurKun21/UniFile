@@ -1,8 +1,21 @@
+# Build files
 .gradle
-/local.properties
-.DS_Store
-/build
-/src
-*.iml
-.idea
+.kotlin
+build
+
+# IDE files
 /captures
+.externalNativeBuild
+.cxx
+*.iml
+
+# Ignore all files in the .idea directory except for icon.png
+.idea/*
+!.idea/icon.png
+
+
+# Configuration files
+local.properties
+
+# macOS specific files
+.DS_Store
