@@ -24,7 +24,7 @@ env:
   JAVA_DISTRO: 'temurin'
 
 jobs:
-  build-app:
+  build:
     runs-on: macos-latest
     strategy:
       fail-fast: false
@@ -49,11 +49,11 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x ./gradlew
     
-      - name: Build ${{ matrix.module }} app
+      - name: Build ${{ matrix.module }}
         run: |
           ./gradlew :${{ matrix.module }}:assembleRelease --parallel
       
-      - name: Upload APK ${{ matrix.module }}
+      - name: Upload ${{ matrix.module }} APK
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.module }}-apk-${{ github.run_number }}
