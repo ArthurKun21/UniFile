@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
 }
 android {
+    namespace = "com.hippo.unifile.example"
     compileSdk = 35
 
     defaultConfig {
