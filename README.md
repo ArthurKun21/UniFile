@@ -48,7 +48,7 @@ Add UniFile as dependency in project `build.gradle`.
 
     dependencies {
         ...
-        compile 'com.github.seven332:unifile:1.0.0'
+        compile 'com.github.ArthurKun21:unifile:<TAG>'
     }
 
 在代码中使用：

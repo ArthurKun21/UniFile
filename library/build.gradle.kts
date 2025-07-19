@@ -1,4 +1,5 @@
 plugins {
+    `maven-publish`
     alias(libs.plugins.android.library)
 }
 android {
@@ -26,8 +27,26 @@ android {
             )
         }
     }
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
 }
 
 dependencies {
     compileOnly(libs.androidx.annotation)
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("release") {
+            groupId = "com.github.arthurkun21"
+            artifactId = "unifile"
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
+    }
 }
