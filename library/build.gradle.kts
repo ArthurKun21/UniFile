@@ -36,7 +36,7 @@ android {
 }
 
 dependencies {
-    compileOnly(libs.androidx.annotation)
+    implementation(libs.jspecify)
 }
 
 publishing {

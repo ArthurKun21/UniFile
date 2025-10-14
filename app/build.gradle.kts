@@ -32,5 +32,5 @@ android {
 dependencies {
     implementation(project(":library"))
 
-    compileOnly(libs.androidx.annotation)
+    implementation(libs.jspecify)
 }
