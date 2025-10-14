@@ -26,8 +26,8 @@ import android.content.res.AssetManager;
 import android.net.Uri;
 import android.text.TextUtils;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -214,7 +214,7 @@ class AssetFile extends UniFile {
 
         try {
             String[] files = mAssetManager.list(mPath);
-            if (files == null || files.length == 0) {
+            if (files == null) {
                 return null;
             }
 

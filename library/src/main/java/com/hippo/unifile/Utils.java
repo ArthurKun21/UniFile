@@ -23,7 +23,7 @@ package com.hippo.unifile;
 import android.text.TextUtils;
 import android.webkit.MimeTypeMap;
 
-import androidx.annotation.Nullable;
+import org.jspecify.annotations.Nullable;
 
 class Utils {
     private Utils() {}
