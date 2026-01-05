@@ -54,7 +54,7 @@ jobs:
           ./gradlew :${{ matrix.module }}:assembleRelease --parallel
       
       - name: Upload ${{ matrix.module }} APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: ${{ matrix.module }}-apk-${{ github.run_number }}
           path: ${{ matrix.module }}/build/outputs/apk/release/${{ matrix.module }}-release.apk
