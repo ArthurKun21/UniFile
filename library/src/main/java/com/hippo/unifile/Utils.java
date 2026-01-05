@@ -23,7 +23,7 @@ package com.hippo.unifile;
 import android.text.TextUtils;
 import android.webkit.MimeTypeMap;
 
-import androidx.annotation.Nullable;
+import org.jspecify.annotations.Nullable;
 
 class Utils {
     private Utils() {}
@@ -76,7 +76,7 @@ class Utils {
 
     // Invariant: Both |parent| and |child| are normalized paths.
     static String resolve(String parent, String child) {
-        if (child.length() == 0 || child.equals("/")) {
+        if (child.isEmpty() || child.equals("/")) {
             return parent;
         }
 

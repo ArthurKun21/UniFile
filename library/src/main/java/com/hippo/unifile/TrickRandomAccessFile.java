@@ -20,7 +20,7 @@ import android.content.res.AssetFileDescriptor;
 import android.os.ParcelFileDescriptor;
 import android.util.Log;
 
-import androidx.annotation.NonNull;
+import org.jspecify.annotations.NonNull;
 
 import java.io.FileDescriptor;
 import java.io.FileNotFoundException;

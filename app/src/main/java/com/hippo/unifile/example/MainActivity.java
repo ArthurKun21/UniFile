@@ -13,9 +13,9 @@ import android.os.Environment;
 import android.view.View;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-
 import com.hippo.unifile.UniFile;
+
+import org.jspecify.annotations.NonNull;
 
 import java.io.File;
 
@@ -101,7 +101,7 @@ public class MainActivity extends Activity {
 
     @Override
     public void onRequestPermissionsResult(int requestCode,
-                                           @NonNull String permissions[], @NonNull int[] grantResults) {
+                                           @NonNull String[] permissions, @NonNull int[] grantResults) {
         if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
             startFileActivityFromRaw();
         } else {

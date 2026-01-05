@@ -22,10 +22,9 @@ import android.content.Intent;
 import android.content.res.AssetManager;
 import android.content.res.Resources;
 import android.net.Uri;
-import android.os.Build;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
 import java.io.File;
 import java.io.IOException;

@@ -24,8 +24,8 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.webkit.MimeTypeMap;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
 import java.io.IOException;
 import java.io.InputStream;
