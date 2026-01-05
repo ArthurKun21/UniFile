@@ -214,7 +214,8 @@ class AssetFile extends UniFile {
 
         try {
             String[] files = mAssetManager.list(mPath);
-            if (files == null) {
+            //noinspection RedundantLengthCheck
+            if (files == null || files.length == 0) { 
                 return null;
             }
 
