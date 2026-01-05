@@ -152,7 +152,7 @@ final class TrickRandomAccessFile extends RandomAccessFile {
         try {
             Object obj = FIELD_FD.get(file);
             if (obj instanceof FileDescriptor) {
-                METHOD_CLOSE.invoke(null, obj);
+                METHOD_CLOSE.invoke(null, (FileDescriptor) obj);
             }
         } catch (IllegalAccessException e) {
             Log.e(TAG, "Failed to invoke libcore.io.IoUtils.close(FileDescriptor): " + e);
